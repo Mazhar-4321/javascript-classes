@@ -16,3 +16,8 @@ if(a%2==0){
 }else{
     console.log("a is odd")
 }
+var i=0
+while(i<10){
+    console.log(i)
+    i++;
+}
