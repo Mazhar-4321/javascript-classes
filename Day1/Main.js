@@ -6,3 +6,13 @@ console.log(a)
 console.log(`Arithmetic Operators: +,-,*,/,%,** a=${a} b=${b} `,a+b,a-b,a*b,a/b,a%b,a**b)
 console.log("Relational Operators: <,>,<=,>=,==,!= ",a<b,a>b,a<=b,a>=b,a==b,a!=b)
 console.log("logical Operator: &&,|| ",a<b&&a<99,a<b||a<99)
+if(a<b){
+    console.log("a is smaller than b")
+}else{
+    console.log("b is smaller than a")
+}
+if(a%2==0){
+    console.log("a is even")
+}else{
+    console.log("a is odd")
+}
