@@ -7,3 +7,4 @@
 1. There are two styles of creating functions
  1. Traditional Method i.e using function keyword
  1. Arrow functions i.e without using function keyword
+ 1. We have to cocentrate more on arrow functions
