@@ -89,27 +89,28 @@ var complexData = {
         }
     ]
 }
-function getUniqueStates(initialValue, currentValue) { // [Telangana,Maharastra],Telangana
-    if (initialValue.indexOf(currentValue) == -1) {
-        initialValue.push(currentValue)
-    }
-    return initialValue
-}
-//Object.values(complexData)=[ [5 objects],[2 objects],[1 ob],[1 obj]]
-//flatMap(e=>e)  =[ 9 0bjects]
-//filter (based on city) =[8 objects]
-//map( for getting partial data i.e sate) =[objects with state property only]
-//reduce ( logic for getting unique states) =[ ]
-//no chaining
-//Object.entries(complexData).forEach(e=>console.log("eleel",e[0]))
-var array = Object.entries(complexData).filter(entry => entry[0] === 'students').
-    map(e => e[1]).forEach(e => {
-        e.filter(e2 => e2.city !== "Hyderabad").forEach(e1 => console.log(e1.firstName))
-    })
-//console.log(array)
-//console.log(Object.entries(complexData).filter(entry=>entry[0]==='students').
-    // console.log(array.flatMap(e => e).
-    // filter(obj => obj.city !== "Hyderabad").
-    // map(e => e.state).
-    // reduce(getUniqueStates, []))
-   // Object.entries(complexData).filter(entry=>entry[0]==='students')
+complexData.students.filter(e=>e.city==="Hyderabad").map(e3=>e3.firstName).forEach(e1=>console.log(e1))
+// function getUniqueStates(initialValue, currentValue) { // [Telangana,Maharastra],Telangana
+//     if (initialValue.indexOf(currentValue) == -1) {
+//         initialValue.push(currentValue)
+//     }
+//     return initialValue
+// }
+// //Object.values(complexData)=[ [5 objects],[2 objects],[1 ob],[1 obj]]
+// //flatMap(e=>e)  =[ 9 0bjects]
+// //filter (based on city) =[8 objects]
+// //map( for getting partial data i.e sate) =[objects with state property only]
+// //reduce ( logic for getting unique states) =[ ]
+// //no chaining
+// //Object.entries(complexData).forEach(e=>console.log("eleel",e[0]))
+// var array = Object.entries(complexData).filter(entry => entry[0] === 'students').
+//     map(e => e[1]).forEach(e => {
+//         e.filter(e2 => e2.city !== "Hyderabad").forEach(e1 => console.log(e1.firstName))
+//     })
+// //console.log(array)
+// //console.log(Object.entries(complexData).filter(entry=>entry[0]==='students').
+//     // console.log(array.flatMap(e => e).
+//     // filter(obj => obj.city !== "Hyderabad").
+//     // map(e => e.state).
+//     // reduce(getUniqueStates, []))
+//    // Object.entries(complexData).filter(entry=>entry[0]==='students')
