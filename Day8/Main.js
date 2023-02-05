@@ -101,8 +101,15 @@ function getUniqueStates(initialValue, currentValue) { // [Telangana,Maharastra]
 //map( for getting partial data i.e sate) =[objects with state property only]
 //reduce ( logic for getting unique states) =[ ]
 //no chaining
-console.log(Object.values(complexData).
-    flatMap(e => e).
-    filter(obj => obj.city !== "Goa").
-    map(e => e.state).
-    reduce(getUniqueStates, []))
+//Object.entries(complexData).forEach(e=>console.log("eleel",e[0]))
+var array = Object.entries(complexData).filter(entry => entry[0] === 'students').
+    map(e => e[1]).forEach(e => {
+        e.filter(e2 => e2.city !== "Hyderabad").forEach(e1 => console.log(e1.firstName))
+    })
+//console.log(array)
+//console.log(Object.entries(complexData).filter(entry=>entry[0]==='students').
+    // console.log(array.flatMap(e => e).
+    // filter(obj => obj.city !== "Hyderabad").
+    // map(e => e.state).
+    // reduce(getUniqueStates, []))
+   // Object.entries(complexData).filter(entry=>entry[0]==='students')
